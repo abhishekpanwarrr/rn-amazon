@@ -48,6 +48,7 @@ const SignIn = () => {
         identifier: data.emailAddress,
         password: data.password,
       });
+      console.log("🚀 ~ onSubmit ~ signInAttempt:", signInAttempt);
       if (signInAttempt.status !== "complete") {
         await setActive({ session: signInAttempt.createdSessionId });
         router.dismissTo("/(tabs)/profile");
@@ -94,7 +95,6 @@ const SignIn = () => {
       }
     }
   };
-  const signInWithPasskey = async () => {};
   return (
     <KeyboardAvoidingView
       className="flex-1 bg-white"
@@ -165,20 +165,6 @@ const SignIn = () => {
           className="bg-yellow-400 rounded-full py-3 items-center mb-4"
         >
           <Text className="text-lg font-medium text-black">Sign In</Text>
-        </TouchableOpacity>
-
-        <View className="flex-row items-center mb-4">
-          <View className="flex-1 h-px bg-gray-300" />
-          <Text className="mx-2 text-gray-500">or</Text>
-          <View className="flex-1 h-px bg-gray-300" />
-        </View>
-        <TouchableOpacity
-          onPress={handleSubmit(onSubmit)}
-          className="border border-gray-400 bg-white rounded-full py-3 items-center mb-4"
-        >
-          <Text className="text-lg font-medium text-black">
-            Sign in with passkey
-          </Text>
         </TouchableOpacity>
       </View>
     </KeyboardAvoidingView>

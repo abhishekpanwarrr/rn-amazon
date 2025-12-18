@@ -69,7 +69,7 @@ export default function Index() {
         horizontal
         showsHorizontalScrollIndicator={false}
         contentContainerClassName="flex-1 flex-row items-center p-4 gap-6"
-        className="absolute top-0 w-full h-14 bg-dark left-0"
+        className="absolute top-[118px] w-full h-14 bg-dark left-0"
         style={scrollStyle}
       >
         <View className="flex-row items-center">
@@ -90,7 +90,7 @@ export default function Index() {
           zIndex: -1,
         }}
         contentContainerStyle={{
-          paddingTop: 48,
+          paddingTop: 105,
         }}
         ListHeaderComponent={() => (
           <>
@@ -132,7 +132,7 @@ export default function Index() {
                 )}
                 renderItem={({ item }) => (
                   <Link
-                    href={`/(tabs)/index/${item.id}`}
+                    href={`/(tabs)/(index)/${item.id}`}
                     asChild
                     style={{ marginBottom: 10 }}
                   >
