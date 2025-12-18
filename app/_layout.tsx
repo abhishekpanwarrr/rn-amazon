@@ -10,9 +10,25 @@ import {
 } from "@react-navigation/native";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Stack, useRouter } from "expo-router";
+import { cssInterop } from "nativewind";
 import { Text, TouchableOpacity, useColorScheme } from "react-native";
 
-const queryClient = new QueryClient();
+cssInterop(Ionicons, {
+  className: {
+    target: false,
+    nativeStyleToProp: {
+      color: true,
+    },
+  },
+});
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: false,
+      staleTime: 1000 * 60 * 5, // 5 minutes
+    },
+  },
+});
 
 const IntialLayout = () => {
   const router = useRouter();
@@ -60,7 +76,6 @@ const IntialLayout = () => {
 
 const RootLayout = () => {
   const colorScheme = useColorScheme();
-  console.log("🚀 ~ RootLayout ~ colorScheme:", colorScheme);
   return (
     <ClerkProvider tokenCache={tokenCache}>
       <QueryClientProvider client={queryClient}>

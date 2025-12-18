@@ -11,7 +11,7 @@ const Layout = () => {
       tabBar={(props) => <CustomTabBar {...props} />}
     >
       <Tabs.Screen
-        name="index"
+        name="(index)"
         options={{
           headerShown: false,
           tabBarIcon: ({ color, size }) => (
