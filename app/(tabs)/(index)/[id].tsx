@@ -13,6 +13,12 @@ const Page = () => {
         }}
       />
       <Text className="text-black text-3xl mt-[150px]">Page {id}</Text>
+      {/* <Button
+        title="Try!"
+        onPress={() => {
+          Sentry.captureException(new Error("First error"));
+        }}
+      /> */}
     </View>
   );
 };
