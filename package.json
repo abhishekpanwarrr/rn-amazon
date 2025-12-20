@@ -14,11 +14,13 @@
     "@clerk/clerk-expo": "^2.19.12",
     "@clerk/expo-passkeys": "^0.4.26",
     "@expo/vector-icons": "^15.0.3",
+    "@gorhom/bottom-sheet": "^5",
     "@hookform/resolvers": "^5.2.2",
     "@react-navigation/bottom-tabs": "^7.4.0",
     "@react-navigation/elements": "^2.6.3",
     "@react-navigation/native": "^7.1.8",
     "@sentry/react-native": "^7.8.0",
+    "@stripe/stripe-react-native": "0.50.3",
     "@tanstack/react-query": "^5.90.12",
     "expo": "~54.0.29",
     "expo-build-properties": "~1.0.10",
@@ -40,6 +42,7 @@
     "react-dom": "19.1.0",
     "react-hook-form": "^7.68.0",
     "react-native": "0.81.5",
+    "react-native-filament": "^1.9.0",
     "react-native-gesture-handler": "~2.28.0",
     "react-native-mmkv": "2",
     "react-native-reanimated": "~4.1.1",
@@ -47,7 +50,9 @@
     "react-native-screens": "~4.16.0",
     "react-native-web": "~0.21.0",
     "react-native-worklets": "0.5.1",
-    "zod": "^4.2.1"
+    "react-native-worklets-core": "^1.6.2",
+    "zod": "^4.2.1",
+    "zustand": "^5.0.9"
   },
   "devDependencies": {
     "@tanstack/eslint-plugin-query": "^5.91.2",

@@ -5,5 +5,5 @@ const config = getSentryExpoConfig(__dirname, {
   annotateReactComponents: true,
   enableSourceContextInDevelopment: true,
 });
-
+config.resolver.assetExts.push("glb");
 module.exports = withNativeWind(config, { input: "./global.css" });

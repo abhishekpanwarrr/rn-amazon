@@ -49,6 +49,13 @@
           "project": "amazon-mobile",
           "organization": "abhishek-rl"
         }
+      ],
+       [
+        "@stripe/stripe-react-native",
+        {
+          "merchantIdentifier": "123456789",
+          "enableGooglePay": true
+        }
       ]
     ],
     "experiments": {

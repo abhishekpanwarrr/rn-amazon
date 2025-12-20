@@ -2,19 +2,9 @@ import { Ionicons } from "@expo/vector-icons";
 import React from "react";
 import { Pressable, TextInput, View } from "react-native";
 
-const SearchBar = ({ withBackButton }: { withBackButton?: boolean }) => {
+const SearchBar = () => {
   return (
     <View className="flex-1 flex-row items-center justify-center bg-dark min-h-36 pt-safe px-3">
-      {withBackButton ? (
-        <Ionicons
-          name="chevron-back"
-          size={24}
-          color={"white"}
-          style={{
-            color: "#fff",
-          }}
-        />
-      ) : null}
       <View className="bg-white flex-row items-center flex-1 rounded-md p-3 gap-4">
         <Ionicons name="search" size={22} className="text-gray-500" />
         <TextInput
